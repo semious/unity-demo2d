@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 
-    // public InputAction LeftAction;
     public InputAction MoveAction;
+
     Rigidbody2D rigidbody2d;
     Vector2 move;
     public float speed = 3.0f;
@@ -26,10 +26,17 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     Vector2 moveDirection = new Vector2(1, 0);
 
+
+    public GameObject projectilePrefab;
+    public InputAction launchAction;
+
     void Start()
     {
         // LeftAction.Enable();
         MoveAction.Enable();
+        launchAction.Enable();
+        launchAction.performed += Launch;
+
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
@@ -84,5 +91,13 @@ public class PlayerController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         MyUIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
 
+    }
+
+    void Launch(InputAction.CallbackContext context)
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * .5f, Quaternion.identity);
+        MyProjectile projectile = projectileObject.GetComponent<MyProjectile>();
+        projectile.Launch(moveDirection, 300);
+        animator.SetTrigger("Launch");
     }
 }

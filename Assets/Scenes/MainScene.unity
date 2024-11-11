@@ -7603,22 +7603,22 @@ PrefabInstance:
     - target: {fileID: 2082305865510829430, guid: e27443f147a8c25459284068e35903ae,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.9929169
       objectReference: {fileID: 0}
     - target: {fileID: 2082305865510829430, guid: e27443f147a8c25459284068e35903ae,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.9929169
       objectReference: {fileID: 0}
     - target: {fileID: 2082305865510829430, guid: e27443f147a8c25459284068e35903ae,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.9929169
       objectReference: {fileID: 0}
     - target: {fileID: 2082305865510829430, guid: e27443f147a8c25459284068e35903ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.05
+      value: -4.0449
       objectReference: {fileID: 0}
     - target: {fileID: 2082305865510829430, guid: e27443f147a8c25459284068e35903ae,
         type: 3}
@@ -7850,10 +7850,51 @@ PrefabInstance:
       propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2979698905449866354, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 3586329531367905290, guid: 9afe2ebe37e89174d96535dade880ca8,
+        type: 3}
+    - target: {fileID: 2979698905449866354, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: launchAction.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979698905449866354, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: launchAction.m_ExpectedControlType
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979698905449866354, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: launchAction.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979698905449866354, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: launchAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: e3bbd937-8e63-443a-873e-cbf606cb7b3d
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979698905449866354, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: launchAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/c
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979698905449866354, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: launchAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Launch
+      objectReference: {fileID: 0}
     - target: {fileID: 4552587326800931851, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
         type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552587326800931851, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5892502756757574734, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
         type: 3}
@@ -7863,22 +7904,22 @@ PrefabInstance:
     - target: {fileID: 7479076747774230456, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.0099317
       objectReference: {fileID: 0}
     - target: {fileID: 7479076747774230456, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.0099317
       objectReference: {fileID: 0}
     - target: {fileID: 7479076747774230456, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.0099317
       objectReference: {fileID: 0}
     - target: {fileID: 7479076747774230456, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.79
+      value: -1.796
       objectReference: {fileID: 0}
     - target: {fileID: 7479076747774230456, guid: 5a0bbb7b23ba97b4e9c244b9332a9620,
         type: 3}
