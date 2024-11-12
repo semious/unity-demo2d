@@ -188,6 +188,10 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
+  speed: 3
+  maxHealth: 5
+  timeInvincible: 2
+  projectilePrefab: {fileID: 0}
   launchAction:
     m_Name: Launch
     m_Type: 0
@@ -197,10 +201,15 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  speed: 3
-  maxHealth: 5
-  timeInvincible: 2
-  projectilePrefab: {fileID: 0}
+  talkAction:
+    m_Name: Talk
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0d3cff85-e70b-43f9-9c19-9c797aa1baf5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!50 &2309053339715714259
 Rigidbody2D:
   serializedVersion: 4

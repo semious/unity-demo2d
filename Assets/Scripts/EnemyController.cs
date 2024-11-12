@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour
     float timer;
     int direction = 1;
 
+    bool aggressive = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,8 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!aggressive) return;
+
         timer -= Time.deltaTime;
 
 
@@ -64,9 +68,11 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Fix()
     {
-
+        aggressive = false;
+        rigidbody2d.simulated = false;
+        animator.SetTrigger("Fixed");
     }
+
 }

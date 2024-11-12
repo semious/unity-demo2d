@@ -9,10 +9,16 @@ public class UIHandler : MonoBehaviour
     public static UIHandler instance { get; private set; }
 
     public float displayTime = 4.0f;
+    private VisualElement m_NonPlayerDialogue;
+     private float m_TimerDisplay;
+    
     
     private VisualElement m_Healthbar;
     private VisualElement m_DialogWindow;
-    private float m_TimerDisplay;
+   
+
+    
+
     
     private void Awake()
     {
@@ -29,6 +35,10 @@ public class UIHandler : MonoBehaviour
         m_TimerDisplay = -1.0f;
 
         SetHealthValue(1.0f);
+
+        m_NonPlayerDialogue = uiDocument.rootVisualElement.Q<VisualElement>("NPCDialogue");
+        m_NonPlayerDialogue.style.display = DisplayStyle.None;
+        m_TimerDisplay = -1.0f;
     }
 
     private void Update()

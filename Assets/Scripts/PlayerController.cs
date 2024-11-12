@@ -30,12 +30,15 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public InputAction launchAction;
 
+    public InputAction talkAction;
+
     void Start()
     {
-        // LeftAction.Enable();
         MoveAction.Enable();
         launchAction.Enable();
         launchAction.performed += Launch;
+        talkAction.Enable();
+        talkAction.performed += FindFriend;
 
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -99,5 +102,14 @@ public class PlayerController : MonoBehaviour
         MyProjectile projectile = projectileObject.GetComponent<MyProjectile>();
         projectile.Launch(moveDirection, 300);
         animator.SetTrigger("Launch");
+    }
+
+    void FindFriend(InputAction.CallbackContext context)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * .2f, moveDirection, 1.5f, LayerMask.GetMask("NPC"));
+        if (hit.collider != null)
+        {
+            Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+        }
     }
 }
