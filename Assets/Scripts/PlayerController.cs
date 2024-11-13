@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
     public InputAction talkAction;
 
+    AudioSource audioSource;
+
     void Start()
     {
         MoveAction.Enable();
@@ -40,11 +42,13 @@ public class PlayerController : MonoBehaviour
         talkAction.Enable();
         talkAction.performed += FindFriend;
 
+        audioSource = GetComponent<AudioSource>();
+
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
 
-        currentHealth = maxHealth;
+        currentHealth = maxHealth - 1;
 
     }
 
@@ -110,6 +114,18 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+            MyNonPlayerCharacter character = hit.collider.GetComponent<MyNonPlayerCharacter>();
+            Debug.Log(character);
+            if (character != null)
+            {
+                MyUIHandler.instance.DisplayDialogue();
+            }
         }
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        Debug.Log(clip);
+        audioSource.PlayOneShot(clip);
     }
 }
