@@ -26,6 +26,7 @@ public class MyHealthCollectible : MonoBehaviour
             if (controller.health < controller.maxHealth)
             {
                 controller.ChangeHealth(1);
+                Debug.Log(collectedClip);
                 controller.PlaySound(collectedClip);
                 Destroy(gameObject);
             }

@@ -16,12 +16,17 @@ public class EnemyController : MonoBehaviour
 
     bool aggressive = true;
 
+    public ParticleSystem smokeEffect;
+
+    AudioSource audioSource;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         timer = changeTime;
     }
 
@@ -73,6 +78,8 @@ public class EnemyController : MonoBehaviour
         aggressive = false;
         rigidbody2d.simulated = false;
         animator.SetTrigger("Fixed");
+        smokeEffect.Stop();
+        audioSource.Stop();
     }
 
 }
