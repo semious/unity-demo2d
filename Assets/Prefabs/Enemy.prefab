@@ -176,6 +176,9 @@ MonoBehaviour:
   speed: 0
   vertical: 0
   changeTime: 3
+  smokeEffect: {fileID: 0}
+  fixedAudio: {fileID: 8300000, guid: 4e356d8e36201c14da953082c4d569ab, type: 3}
+  hitAudio: {fileID: 8300000, guid: 4ecf2abcdd2987b4ab2773ac82a0f2de, type: 3}
 --- !u!95 &-5039310224157701645
 Animator:
   serializedVersion: 5

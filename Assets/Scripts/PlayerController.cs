@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     AudioSource audioSource;
 
+    public AudioClip hitAudio;
+
     void Start()
     {
         MoveAction.Enable();
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour
             isInvincible = true;
             damageCooldown = timeInvincible;
             animator.SetTrigger("Hit");
+            audioSource.PlayOneShot(hitAudio);
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         MyUIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);

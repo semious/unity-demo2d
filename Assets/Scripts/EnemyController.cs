@@ -20,6 +20,9 @@ public class EnemyController : MonoBehaviour
 
     AudioSource audioSource;
 
+    public AudioClip fixedAudio;
+    public AudioClip hitAudio;
+
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +83,8 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("Fixed");
         smokeEffect.Stop();
         audioSource.Stop();
+        audioSource.PlayOneShot(hitAudio);
+        audioSource.PlayOneShot(fixedAudio);
     }
 
 }
